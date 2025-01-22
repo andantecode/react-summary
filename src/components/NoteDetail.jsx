@@ -44,6 +44,7 @@ const NoteDetail = () => {
                 <div>
                     <time className="block text-gray-400 text-sm">{format(note.time, "yyyy MM dd HH:MM")}</time>
                     <input 
+                        data-testid="title"
                         type="text" 
                         className="bg-transparent text-2xl font-bold focus-within:outline-blue-500"
                         value={note.title}
@@ -63,6 +64,7 @@ const NoteDetail = () => {
                 <div className="flex-1 p-4 rounded mr-4 bg-gray-800">
                     <h2 className="text-lg font-semibold mb-2">메모</h2>
                     <textarea 
+                        data-testid="content"
                         className="bg-gray-700 w-full h-64 p-2 rounded resize-none focus-within:ring-2 focus-within:outline-blue-500"
                         value={note.content}
                         onChange={handleChangeContent}
